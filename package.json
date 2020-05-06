@@ -4,7 +4,9 @@
   "description": "Fake WeMo device ported to NodeJS. Allows Alexa to make api calls.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha test/"
+    "test": "mocha test/",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -36,10 +38,12 @@
     "hapi": "^16.1.0",
     "lodash": "^4.17.3",
     "q": "^1.4.1",
-    "uuid": "^3.0.1"
+    "uuid": "^3.0.1",
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.1.2"
-  }
+  },
+  "snyk": true
 }
